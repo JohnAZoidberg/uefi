@@ -26,7 +26,7 @@ export obj := $(src)/build
 export objk := $(src)/build/util/kconfig
 
 ifndef LIBCONFIG_PATH
-LIBCONFIG_PATH := $(src)/../../../../../src/coreboot/payloads/libpayload
+LIBCONFIG_PATH := $(src)/coreboot/payloads/libpayload
 endif
 export LIBCONFIG_PATH
 
@@ -87,7 +87,7 @@ include .xcompile
 ARCH-$(CONFIG_TARGET_I386) := i386
 ARCH-$(CONFIG_TARGET_X64) := x86_64
 
-XGCC := $(src)/../../../../../src/coreboot/util/crossgcc/xgcc/bin
+XGCC := $(src)/coreboot/util/crossgcc/xgcc/bin
 CC := $(XGCC)/$(ARCH-y)-elf-gcc
 AS := $(XGCC)/$(ARCH-y)-elf-as
 LD := $(XGCC)/$(ARCH-y)-elf-ld
